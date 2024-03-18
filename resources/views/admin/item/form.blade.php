@@ -22,13 +22,6 @@
 
     <div class="row mb-6">
 
-        {{--  <label class="col-lg-2 col-form-label required fw-bold fs-6">Discount Price</label>
-
-        <div class="col-lg-4 fv-row">
-            <input type="number" class="form-control form-control-lg form-control-solid" name="dis_item_price"
-                placeholder="discount">
-        </div>  --}}
-
         <label class="col-lg-2 col-form-label required fw-bold fs-6">Category</label>
 
         <div class="col-lg-4 fv-row">
@@ -85,6 +78,14 @@
     </div>
 
     <div class="row mt-6">
+
+        <label class="col-lg-2 col-form-label required fw-bold fs-6">Item Weight</label>
+
+        <div class="col-lg-4 fv-row">
+            <input type="text" class="form-control form-control-lg form-control-solid" name="item_weight[]"
+                placeholder="Item weight kg/unit">
+        </div>
+
         <table class="table table-bordered" id="dynamicAddRemove">
             <div class="row mb-6">
                 <div class="col-lg-4 fv-row">
@@ -93,8 +94,8 @@
                 </div>
             </div>
         </table>
-    </div>
 
+    </div>
 
     <div class="row mb-6">
         <label class="col-lg-2 col-form-label required fw-bold fs-6">Description</label>

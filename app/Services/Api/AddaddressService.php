@@ -15,14 +15,12 @@ class AddaddressService
         try {
 
             $validator = Validator::make($request->all(), [
-                'order_id' => 'required',
                 'address' => 'required',
                 'zip' => 'required',
                 'city' => 'required',
-                'address' => 'required',
                 'address_type' => 'required',
                 'building' => 'required',
-                'other_address' => 'required',
+                // 'other_address' => 'required',
             ]);
 
             if ($validator->fails()) {
@@ -34,7 +32,6 @@ class AddaddressService
 
             $addressinput = [
                 'user_id' => auth()->user()->id,
-                'order_id' => $request->order_id,
                 'address' => $request->address,
                 'zip' => $request->zip,
                 'city' => $request->city,

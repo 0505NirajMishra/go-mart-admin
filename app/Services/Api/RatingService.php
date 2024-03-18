@@ -18,8 +18,6 @@ class RatingService
             $validator = Validator::make($request->all(), [
                 'order_review' => 'required',
                 'rating' => 'required|numeric|min:1|max:5',
-                'store_id' => 'required',
-                'order_id' => 'required',
                 'item_id' => 'required',
                 'user_id' => 'required'
             ]);

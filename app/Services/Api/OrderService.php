@@ -217,6 +217,7 @@ class OrderService
             $getData = DB::table('orders')
                 ->join('users', 'users.id', '=', 'orders.user_id')
                 ->select('orders.*', 'users.name')
+                ->where('users.id',auth()->user()->id)
                 ->get();
 
             if ($getData) {

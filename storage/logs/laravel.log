@@ -1,0 +1,144 @@
+[2024-03-07 11:12:50] local.ERROR: Attempt to read property "id" on null
+{"exception":"[object] (ErrorException(code: 0): Attempt to read property \"id\"
+on null at E:\\xampp\\htdocs\\go-mart\\app\\Services\\Api\\AuthService.php:577)
+[stacktrace]
+#0 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(270): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'E:\\\\xampp\\\\htdocs...', 577)
+#1 E:\\xampp\\htdocs\\go-mart\\app\\Services\\Api\\AuthService.php(577): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'E:\\\\xampp\\\\htdocs...', 577)
+#2 E:\\xampp\\htdocs\\go-mart\\app\\Http\\Controllers\\Api\\V1\\Customer\\AuthController.php(159): App\\Services\\Api\\AuthService::profileUpdate(Object(Illuminate\\Http\\Request))
+#3 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\Api\\V1\\Customer\\AuthController->profileUpdate(Object(Illuminate\\Http\\Request))
+#4 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('profileUpdate', Array)
+#5 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(260): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Api\\V1\\Customer\\AuthController), 'profileUpdate')
+#6 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#7 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Route->run()
+#8 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#9 E:\\xampp\\htdocs\\go-mart\\vendor\\spatie\\laravel-image-optimizer\\src\\Middlewares\\OptimizeImages.php(28): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Spatie\\LaravelImageOptimizer\\Middlewares\\OptimizeImages->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(102): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#15 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(54): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#16 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#17 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#19 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#20 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#21 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#22 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#23 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#24 E:\\xampp\\htdocs\\go-mart\\vendor\\proengsoft\\laravel-jsvalidation\\src\\RemoteValidationMiddleware.php(61): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Proengsoft\\JsValidation\\RemoteValidationMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 E:\\xampp\\htdocs\\go-mart\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 E:\\xampp\\htdocs\\go-mart\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 E:\\xampp\\htdocs\\go-mart\\app\\Http\\Middleware\\GlobalRequestMiddleware.php(20): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\GlobalRequestMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#47 E:\\xampp\\htdocs\\go-mart\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#48 E:\\xampp\\htdocs\\go-mart\\server.php(21): require_once('E:\\\\xampp\\\\htdocs...')
+#49 {main}
+"}
+[2024-03-07 11:14:03] local.ERROR: Attempt to read property "id" on null {"exception":"[object] (ErrorException(code: 0): Attempt to read property \"id\" on null at E:\\xampp\\htdocs\\go-mart\\app\\Services\\Api\\AuthService.php:577)
+[stacktrace]
+#0 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(270): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'E:\\\\xampp\\\\htdocs...', 577)
+#1 E:\\xampp\\htdocs\\go-mart\\app\\Services\\Api\\AuthService.php(577): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'E:\\\\xampp\\\\htdocs...', 577)
+#2 E:\\xampp\\htdocs\\go-mart\\app\\Http\\Controllers\\Api\\V1\\Customer\\AuthController.php(159): App\\Services\\Api\\AuthService::profileUpdate(Object(Illuminate\\Http\\Request))
+#3 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\Api\\V1\\Customer\\AuthController->profileUpdate(Object(Illuminate\\Http\\Request))
+#4 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('profileUpdate', Array)
+#5 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(260): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Api\\V1\\Customer\\AuthController), 'profileUpdate')
+#6 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#7 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Route->run()
+#8 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#9 E:\\xampp\\htdocs\\go-mart\\vendor\\spatie\\laravel-image-optimizer\\src\\Middlewares\\OptimizeImages.php(28): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Spatie\\LaravelImageOptimizer\\Middlewares\\OptimizeImages->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(102): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#15 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(54): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#16 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#17 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#19 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#20 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#21 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#22 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(190): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#23 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#24 E:\\xampp\\htdocs\\go-mart\\vendor\\proengsoft\\laravel-jsvalidation\\src\\RemoteValidationMiddleware.php(61): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Proengsoft\\JsValidation\\RemoteValidationMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 E:\\xampp\\htdocs\\go-mart\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 E:\\xampp\\htdocs\\go-mart\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(52): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 E:\\xampp\\htdocs\\go-mart\\app\\Http\\Middleware\\GlobalRequestMiddleware.php(20): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\GlobalRequestMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(165): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 E:\\xampp\\htdocs\\go-mart\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(134): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#47 E:\\xampp\\htdocs\\go-mart\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#48 E:\\xampp\\htdocs\\go-mart\\server.php(21): require_once('E:\\\\xampp\\\\htdocs...')
+#49 {main}
+"}
+[2024-03-14 08:13:10] local.ERROR: Uncaught ReflectionException: Class "Tymon\JWTAuth\Middleware\GetUserFromToken" does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionMethod->__construct('Tymon\\JWTAuth\\M...', 'handle')
+#1 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class \"Tymon\\JWTAuth\\Middleware\\GetUserFromToken\" does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionMethod->__construct('Tymon\\\\JWTAuth\\\\M...', 'handle')
+#1 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-03-15 05:13:01] local.ERROR: Uncaught ReflectionException: Class "Tymon\JWTAuth\Middleware\GetUserFromToken" does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionMethod->__construct('Tymon\\JWTAuth\\M...', 'handle')
+#1 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class \"Tymon\\JWTAuth\\Middleware\\GetUserFromToken\" does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionMethod->__construct('Tymon\\\\JWTAuth\\\\M...', 'handle')
+#1 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
+[2024-03-18 05:17:43] local.ERROR: Uncaught ReflectionException: Class "Tymon\JWTAuth\Middleware\GetUserFromToken" does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionMethod->__construct('Tymon\\JWTAuth\\M...', 'handle')
+#1 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class \"Tymon\\JWTAuth\\Middleware\\GetUserFromToken\" does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionMethod->__construct('Tymon\\\\JWTAuth\\\\M...', 'handle')
+#1 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 

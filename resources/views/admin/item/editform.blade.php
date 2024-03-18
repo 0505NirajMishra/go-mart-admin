@@ -107,6 +107,7 @@
     </div>
 
     <div class="row mt-6">
+
         <?php $highLightsFrench = json_decode($item->item_weight); ?>
         @if($highLightsFrench !== null)
         <table class="table table-bordered" id="dynamicAddRemove">
@@ -119,16 +120,12 @@
                 </div>
                 <label class="col-lg-2 col-form-label required fw-bold fs-6">Item weight kg/Unit</label>
                 <div class="col-lg-4 fv-row">
-
-
-
                     <input type="text" name="item_weight[]" value="{{ $highLightsFrench[0] }}"
                         placeholder="Enter Highlight English" class="form-control form-control-lg form-control-solid"
                         maxlength="100" />
                 </div>
 
             </div>
-
     </div>
 </table>
 

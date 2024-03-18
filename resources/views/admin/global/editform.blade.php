@@ -120,12 +120,12 @@
                 'max' => 6,
                 'value' => 2,
                 'class' => 'form-control form-control-lg form-control-solid',
-                'placeholder' => trans_choice('content.application_color', 1),
+                'placeholder' => trans_choice('Enter Mobile Number', 1),
             ]) !!}
         </div>
     </div>
 
-     
+
 
 </div>
 

@@ -63,7 +63,6 @@ class UtilityService
         ], 422));
     }
 
-
     public static function is500Response($responseMessage)
     {
         throw new HttpResponseException(response()->json([

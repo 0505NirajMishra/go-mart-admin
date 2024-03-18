@@ -17,18 +17,18 @@
     <div class="container-fluid">
         <div class="row mt-5 justify-content-center">
             <div class="col-md-3 col-sm-3 col-xl-3 col-lg-3">
-                <input 
-                       type="search" 
-                       name="name" 
+                <input
+                       type="search"
+                       name="name"
                        class="form-control searchEmail p-4"
-                       placeholder="Search for User name" 
-                       
+                       placeholder="Search for User name"
+
                 />
             </div>
         </div>
         <div class="row mt-3 text-center justify-content-center">
             <div class="col-12 table-responsive">
-                <table class="table table-bordered 
+                <table class="table table-bordered
                        data-table text-center table-striped"
                     style="border-radius: 15px;">
                     <thead style="font-size:14px;">
@@ -70,7 +70,7 @@
                     data: 'image',
                     name: 'image',
                     render: function(data) {
-                        return '<img src="{{ env('APP_URL') }}/uploads/' + data +
+                        return '<img src="' + data +
                             '" class="avatar" width="50" height="50"/>';
                     }
                 },

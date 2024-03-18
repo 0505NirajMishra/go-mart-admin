@@ -61,6 +61,7 @@ Route::group(['middleware' => ['optimizeImages'], 'prefix' => '/v1/customer', 'n
             Route::post('RemoveFavorite', 'RemoveFavorite');
             Route::post('Addcart', 'Addcart');
             Route::post('getCartItem', 'getCartItem');
+            Route::post('update-profile', 'profileUpdate');
             // Route::post('Checkoutlist', 'Checkoutlist');
             // Route::post('Checkout', 'Checkout');
             // Route::post('Placeorder', 'Placeorder');
@@ -77,9 +78,10 @@ Route::group(['middleware' => ['optimizeImages'], 'prefix' => '/v1/customer', 'n
         });
 
         /* Profile Controller */
+
         // Route::controller(CProfileController::class)->group(function () {
         //     Route::get('profile', 'profile');
-        //     Route::put('update-profile', 'updateProfile');
+
         //     Route::post('update-profile-image', 'updateProfileImage');
         // });
 

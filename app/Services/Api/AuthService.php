@@ -74,8 +74,8 @@ class AuthService
         }
         $user = JWTAuth::setToken($token)->toUser();
 
-        if (!empty($user->profile)) {
-            $user->profile = FileService::image_path($user->profile);
+        if (!empty($user->image)) {
+            $user->image = FileService::image_path($user->image);
         }
 
         if ($user->status == 0) {
@@ -146,6 +146,8 @@ class AuthService
                 $input['image'] = $picture;
             }
 
+            print_r($input['image']);
+
             $user = UserService::create($input);
 
             $token = auth('api')->login($user, ['exp' => Carbon::now()->addDays(120)->timestamp]);
@@ -163,8 +165,8 @@ class AuthService
 
             $user = JWTAuth::setToken($token)->toUser();
 
-            if (!empty($user->profile)) {
-                $user->profile = FileService::image_path($user->profile);
+            if (!empty($user->image)) {
+                $user->image = FileService::image_path($user->image);
             }
 
             if ($user->status == 0) {
@@ -238,7 +240,7 @@ class AuthService
                 200
             );
         }
-            
+
     }
 
     /**
@@ -356,7 +358,8 @@ class AuthService
     {
         $profile = User::where('id', auth()->user()->id)->get();
 
-        foreach ($profile as $data) {
+        foreach ($profile as $data)
+        {
             if (!empty($data->picture)) {
                 $data->picture = FileService::image_path($data->picture);
             }
@@ -515,6 +518,7 @@ class AuthService
     public static function userProfile()
     {
         $profile = User::where('id', auth()->user()->id)->get();
+
         foreach ($profile as $data) {
             if (!empty($data->image)) {
                 $data->image = FileService::image_path($data->image);
@@ -551,11 +555,12 @@ class AuthService
      */
     public static function profileUpdate(Request $request)
     {
-
         $input = array();
+
         if (!empty($request->name)) {
             $input['name'] = $request->name;
         }
+
         if (!empty($request->email)) {
             $input['email'] = $request->email;
         }
@@ -564,19 +569,18 @@ class AuthService
             $input['phone'] = $request->phone;
         }
 
-        if (!empty($request->profile)) {
-            $profile = FileService::imageUploader($request, 'profile', 'profile/image/');
-            $input['profile'] = $profile;
-
+        if (!empty($request->image)) {
+            $image = FileService::imageUploader($request, 'image', 'image/image/');
+            $input['image'] = $image;
         }
 
-        $result = User::where('id', auth()->user()->id)->update($input);
+        $result = User::where('id',auth()->user()->id)->update($input);
+
         if ($result) {
             return response()->json(
                 [
                     'status' => true,
-                    'message' => 'Profile Update Successfully',
-
+                    'message' => 'Profile Update Successfully'
                 ],
                 200
             );
@@ -584,10 +588,9 @@ class AuthService
             return response()->json(
                 [
                     'status' => false,
-                    'message' => 'Profile not Updated',
-                    'data' => [],
+                    'message' => 'Profile not Updated'
                 ],
-                200
+                400
             );
         }
     }

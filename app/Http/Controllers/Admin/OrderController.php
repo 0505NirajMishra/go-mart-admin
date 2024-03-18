@@ -54,12 +54,10 @@ class OrderController extends Controller
     // public function index(Request $request)
     // {
     //     if ($request->ajax()) {
-
     //         $query = Order::join('users', 'users.id', '=', 'orders.user_id')
     //             ->join('drivers', 'drivers.driver_id', '=', 'orders.driver_id')
     //             ->join('stores', 'stores.store_id', '=', 'orders.store_id')
     //             ->select('orders.*', 'users.name as user_name', 'drivers.driver_name as dri_name', 'stores.store_name as Order_store_name');
-
     //         if ($request->has('driver_name')) {
     //             $name = $request->input('driver_name');
     //             $query->where(function ($query) use ($name) {
@@ -67,14 +65,12 @@ class OrderController extends Controller
     //                     ->orWhereRaw('UPPER(driver_name) LIKE ?', ['%' . strtoupper($name) . '%']);
     //             });
     //         }
-
     //         return \DataTables::of($query)->addIndexColumn()
     //             ->addColumn('order_status', function ($model) {
     //                 return $model->order_status == 0 ? 'Pending' :
     //                 ($model->order_status == 1 ? 'Complete' : 'Cancel');
     //             })
     //             ->addColumn('action', function ($row) {
-
     //                 $printbtn = '<a href="orders/print/' . $row->order_id . '" class="badge badge-warning p-2" ><i class="fa fa-eye" style="color:white;"></i></a>';
     //                 $btn1 = '&nbsp;<a href="orders/' . $row->order_id . '/edit" class="badge badge-success p-2"><i
     //                 class="fa-regular fa-pen-to-square"
@@ -83,20 +79,17 @@ class OrderController extends Controller
     //                 <i class="fa-solid fa-trash-can" style="color:white;"></i>
     //                 </a>';
     //                 return $printbtn." ".$btn1." ".$btn2;
-
     //             })
     //             ->rawColumns(['action'])
     //             ->make(true);
     //     }
-
     //     return view('admin.order.index');
-
     // }
 
     public function index(Request $request)
     {
-        if ($request->ajax()) {
-
+        if ($request->ajax())
+        {
             $query = Order::join('users', 'users.id', '=', 'orders.user_id')
             // ->join('drivers', 'drivers.driver_id', '=', 'orders.driver_id')
             // ->join('stores', 'stores.store_id', '=', 'orders.store_id')
@@ -122,16 +115,13 @@ class OrderController extends Controller
                 ->addColumn('action', function ($row) {
 
                     $printbtn = '<a href="orders/print/' . $row->order_no . '" class="badge badge-warning p-2" ><i class="fa fa-eye" style="color:white;"></i></a>';
-
                     // $btn1 = '&nbsp;<a href="orders/edit/?id='. $row->order_no .'" class="badge badge-success p-2"><i
                     // class="fa-regular fa-pen-to-square"
                     // style="color:white;"></i></a>';
-
                     $btn2 = '&nbsp;<a href="orders/destroy/' . $row->order_no . '" data-toggle="tooltip" data-original-title="Delete" class="badge badge-danger p-2">
                     <i class="fa-solid fa-trash-can" style="color:white;"></i>
                     </a>';
                     return $printbtn . " " . $btn2;
-
                 })
                 ->rawColumns(['action'])
                 ->make(true);

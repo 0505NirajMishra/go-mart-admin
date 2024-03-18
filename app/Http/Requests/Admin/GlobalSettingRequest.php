@@ -12,7 +12,7 @@ class GlobalSettingRequest extends FormRequest
             return [
                 'application_name' => 'required|regex:/(^[A-Za-z ]+$)+/',
                 'application_color' => 'required',
-                'currency_code' => 'required|max:3|min:2|regex:/^[\pL\s\-]+$/u',
+                'currency_code' => 'required|regex:/^[\pL\s\-]+$/u',
                 'currency_symbol' => 'required',
                 'currency_name' => 'required|regex:/(^[A-Za-z ]+$)+/',
                 'address' => 'required|max:200',
@@ -23,7 +23,7 @@ class GlobalSettingRequest extends FormRequest
             return [
                 'application_name' => 'required|regex:/(^[A-Za-z ]+$)+/',
                 'application_color' => 'required',
-                'currency_code' => 'required|max:3|min:2|regex:/^[\pL\s\-]+$/u',
+                'currency_code' => 'required|regex:/^[\pL\s\-]+$/u',
                 'currency_symbol' => 'required',
                 'currency_name' => 'required|regex:/(^[A-Za-z ]+$)+/',
                 'address' => 'required|max:200',
