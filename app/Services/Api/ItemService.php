@@ -16,20 +16,19 @@ class ItemService
 
         $getItem = DB::table('items')->where('item_publish', 'Yes')->get();
 
-        foreach($getItem as $data){
-             $data->total_amount=$data->item_price * $data->quantity;
+        foreach ($getItem as $data) {
+            $data->total_amount = $data->item_price * $data->quantity;
 
-                $likestatus=UserService::checklikestatus($data->item_id,auth()->user()->id);
-                if($likestatus == null){
-                    $data->like_status=0;
-                }else{
-                    $data->like_status=$likestatus->like_status;
-                }
+            $likestatus = UserService::checklikestatus($data->item_id, auth()->user()->id);
+            if ($likestatus == null) {
+                $data->like_status = 0;
+            } else {
+                $data->like_status = $likestatus->like_status;
+            }
 
         }
 
-        if (count($getItem) > 0)
-        {
+        if (count($getItem) > 0) {
             return response()->json(
                 [
                     'status' => true,
@@ -88,6 +87,8 @@ class ItemService
 
     public static function getProductByCatID(Request $request)
     {
+        // echo "sdvjdsbnvkjsdv";
+
         try {
 
             $validator = Validator::make($request->all(), [
@@ -103,9 +104,18 @@ class ItemService
 
             $getProductByCatId['product'] = DB::table('items')->where('items.category_id', $request->category_id)->get();
 
-            foreach ($getProductByCatId['product'] as $rating) {
-                $rating->rating = DB::table('reviewandratings')
-                    ->where('item_id', $rating->item_id)->avg('rating');
+            foreach ($getProductByCatId['product'] as $rating)
+            {
+                $rating->rating_view = DB::table('reviewandratings')->where('item_id', $rating->item_id)->avg('rating');
+
+                $likestatus = UserService::checklikestatus($rating->item_id, auth()->user()->id);
+
+                if ($likestatus == null) {
+                    $rating->like_status = 0;
+                } else {
+                    $rating->like_status = $likestatus->like_status;
+                }
+
             }
 
             if (count($getProductByCatId) > 0) {
@@ -121,8 +131,7 @@ class ItemService
                 return response()->json(
                     [
                         'status' => false,
-                        'message' => 'Data not Found',
-                        'data' => [],
+                        'message' => 'Data not Found'
                     ],
                     200
                 );
@@ -153,8 +162,20 @@ class ItemService
             $getProductByCatId['product'] = DB::table('items')->where('items.item_id', $request->item_id)->get();
 
             foreach ($getProductByCatId['product'] as $rating) {
-                $rating->rating = DB::table('reviewandratings')
+                $rating->rating_view = DB::table('reviewandratings')
                     ->where('item_id', $rating->item_id)->avg('rating');
+
+
+                $likestatus = UserService::checklikestatus($rating->item_id,auth()->user()->id);
+
+                if ($likestatus == null) {
+                    $rating->like_status = 0;
+                } else {
+                    $rating->like_status = $likestatus->like_status;
+                }
+
+
+
             }
 
             if (count($getProductByCatId) > 0) {

@@ -67,11 +67,11 @@
                     name: 'id'
                 },
                 {
-                    data: 'image',
-                    name: 'image',
+                    data: 'profile',
+                    name: 'profile',
                     render: function(data) {
-                        return '<img src="' + data +
-                            '" class="avatar" width="50" height="50"/>';
+                        return '<img src="{{ env('APP_URL') }}/uploads/' + data +
+                        '" class="avatar" width="50" height="50"/>';
                     }
                 },
                 {

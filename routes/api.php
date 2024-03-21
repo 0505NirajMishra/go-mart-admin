@@ -36,10 +36,8 @@ Route::group(['middleware' => ['optimizeImages'], 'prefix' => '/v1/customer', 'n
         Route::post('getsettingdata', 'getsettingdata');
         Route::post('getSubcategory', 'getSubcategory');
         Route::post('getCategory', 'getCategory');
-        Route::post('getProductByCatID', 'getProductByCatID');
         Route::post('getBanner', 'getBanner');
 
-        Route::post('getProductByItemID', 'getProductByItemID');
     });
 
     // -------- Register And Login API ----------
@@ -62,6 +60,8 @@ Route::group(['middleware' => ['optimizeImages'], 'prefix' => '/v1/customer', 'n
             Route::post('Addcart', 'Addcart');
             Route::post('getCartItem', 'getCartItem');
             Route::post('update-profile', 'profileUpdate');
+            Route::post('getProductByCatID', 'getProductByCatID');
+            Route::post('getProductByItemID', 'getProductByItemID');
             // Route::post('Checkoutlist', 'Checkoutlist');
             // Route::post('Checkout', 'Checkout');
             // Route::post('Placeorder', 'Placeorder');
@@ -75,6 +75,7 @@ Route::group(['middleware' => ['optimizeImages'], 'prefix' => '/v1/customer', 'n
             Route::post('getOrderdetail', 'getOrderdetail');
             Route::post('getOrderByOrderNo', 'getOrderByOrderNo');
             Route::post('profileBytoken', 'profileBytoken');
+            Route::post('userProfile', 'userProfile');
         });
 
         /* Profile Controller */

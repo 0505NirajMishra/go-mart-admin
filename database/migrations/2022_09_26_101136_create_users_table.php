@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name', 150);
             $table->string('email', 200)->nullable();
             $table->string('phone', 200)->nullable();
-            $table->string('image', 200)->nullable();
+            $table->string('profile', 200)->nullable();
             $table->string('password');
             $table->string('intrest_id', 200)->nullable();
             $table->string('status')->comment('0:block,1:unblock');

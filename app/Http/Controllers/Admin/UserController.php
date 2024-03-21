@@ -38,7 +38,7 @@ class UserController extends Controller
 
         if ($request->ajax()) {
 
-            $query = User::where('status', '0');
+            $query = User::get();
 
             if ($request->has('name')) {
                 $name = $request->input('name');

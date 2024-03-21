@@ -31,8 +31,6 @@ class AuthService
 
     public static function login(Request $request)
     {
-
-        // $fieldType = filter_var($request->email, FILTER_VALIDATE_EMAIL) ? 'email' : 'phone';
         $user = User::where('email', $request->email)->first();
 
         if (!$user) {
@@ -78,12 +76,14 @@ class AuthService
             $user->image = FileService::image_path($user->image);
         }
 
-        if ($user->status == 0) {
-            // UserService::updateLastLogin($user->id, $request);
-            if (!empty($request->fcm_token)) {
+        if ($user->status == 0  && $user->mob_verify == 1) {
+
+            if (!empty($request->fcm_token))
+            {
                 $data = array('fcm_token' => $request->fcm_token);
                 $result = DB::table('users')->where('email', $request->email)->update($data);
             }
+
             return response()->json(
                 [
                     'status' => true,
@@ -141,12 +141,10 @@ class AuthService
                 ]
             );
 
-            if (!empty($input['image'])) {
-                $picture = FileService::imageUploader($request, 'image', 'profile/image/');
-                $input['image'] = $picture;
+            if (!empty($input['profile'])) {
+                $picture = FileService::imageUploader($request, 'profile', 'profile/image/');
+                $input['profile'] = $picture;
             }
-
-            print_r($input['image']);
 
             $user = UserService::create($input);
 
@@ -165,11 +163,12 @@ class AuthService
 
             $user = JWTAuth::setToken($token)->toUser();
 
-            if (!empty($user->image)) {
-                $user->image = FileService::image_path($user->image);
+            if (!empty($user->profile)) {
+                $user->profile = FileService::image_path($user->profile);
             }
 
-            if ($user->status == 0) {
+            if ($user->status == 0)
+            {
                 return response()->json(
                     [
                         'status' => true,
@@ -418,23 +417,85 @@ class AuthService
                 ], 400);
             }
 
-            $data = MasterOtp::where('email', $request->email)
-                ->where('otp', $request->otp)
-                ->orderBy('created_at', 'desc')
-                ->first();
+            $user = User::where('email', $request->email)->first();
 
-            if ($data) {
-                return response()->json([
-                    'status' => true,
-                    'message' => 'Otp Verify Successfully',
+            if ($user) {
 
-                ], 200);
+                $data = MasterOtp::where('email', $request->email)
+                    ->where('otp', $request->otp)
+                    ->orderBy('created_at', 'desc')
+                    ->first();
+
+                if ($data) {
+
+                    $token = auth('api')->login($user, [
+                        'exp' => Carbon::now()->addDays(120)->timestamp,
+                    ]);
+
+                    if (!$token) {
+                        return response()->json(
+                            [
+                                'status' => false,
+                                'message' => 'unauthorized token',
+                                'type' => 'unauthorized',
+                            ],
+                            200
+                        );
+                    }
+                    $user = JWTAuth::setToken($token)->toUser();
+
+                    HelperService::firebaseTokenSubscribeToTopic(
+                        'users',
+                        $user->fcm_token
+                    );
+
+                    $user = DB::table('users')
+                        ->where('id', $user->id)->first();
+
+                    if ($user->status == 0 || $user->mob_verify == 1) {
+
+                        $data->delete();
+
+                        return response()->json(
+                            [
+                                'status' => true,
+                                'message' => 'Verify successfully',
+                                'token' => $token,
+                                'data' => $user,
+                            ],
+                            200
+                        );
+                    } else {
+
+                        return response()->json(
+                            [
+                                'status' => false,
+                                'message' => 'Deactive user',
+                                'type' => 'unauthorized',
+                            ],
+                            200
+                        );
+                    }
+
+                } else {
+                    return response()->json(
+                        [
+                            'status' => false,
+                            'message' => 'Wrong OTP',
+                            'errors' => ['otp' => ['Wrong OTP']],
+                        ],
+                        200
+                    );
+                }
             } else {
-                return response()->json([
-                    'status' => false,
-                    'message' => 'Wrong OTP',
-                    'errors' => ['otp' => ['Wrong OTP']],
-                ], 200);
+                return response()->json(
+                    [
+                        'status' => false,
+                        'message' => 'Unauthorized User',
+                        'type' => 'unauthorized',
+                    ],
+                    200
+                );
             }
 
         } catch (Exception $e) {
@@ -520,8 +581,8 @@ class AuthService
         $profile = User::where('id', auth()->user()->id)->get();
 
         foreach ($profile as $data) {
-            if (!empty($data->image)) {
-                $data->image = FileService::image_path($data->image);
+            if (!empty($data->profile)) {
+                $data->profile = FileService::image_path($data->profile);
             }
         }
 
@@ -569,9 +630,9 @@ class AuthService
             $input['phone'] = $request->phone;
         }
 
-        if (!empty($request->image)) {
-            $image = FileService::imageUploader($request, 'image', 'image/image/');
-            $input['image'] = $image;
+        if (!empty($request->profile)) {
+            $image = FileService::imageUploader($request, 'profile', 'profile/image/');
+            $input['profile'] = $image;
         }
 
         $result = User::where('id',auth()->user()->id)->update($input);
