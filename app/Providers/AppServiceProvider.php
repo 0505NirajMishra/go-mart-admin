@@ -40,7 +40,7 @@ class AppServiceProvider extends ServiceProvider
         //     // This will only accept alpha and spaces.
         //     // If you want to accept hyphens use: /^[\pL\s-]+$/u.
         //     return preg_match('/^[\pL\s]+$/u', $value);
-    
+
         //Add this custom validation rule.
         Validator::extend('alpha_num_spaces', function ($attribute, $value) {
             // This will only accept alpha and spaces.
