@@ -49,8 +49,8 @@
                             <!--begin::Avatar-->
                             <div class="symbol symbol-50px me-5">
                                 <!-- <img alt="Logo" src="{{asset('admin/dist/media/logos/consultant.png')}}" /> -->
-                           
-                            
+
+
                             </div>
                             <!--end::Avatar-->
                             <!--begin::Username-->
@@ -70,10 +70,9 @@
                     <div class="separator my-2"></div>
                     <!--end::Menu separator-->
                     <!--begin::Menu item-->
-                     <!-- <div class="menu-item px-5">
-                        <a href="{{ route('admin.profile') }}"
-                            class="menu-link px-5">{{ trans_choice('content.topbar.my_profile', 1) }}</a>
-                    </div> -->
+                    <div class="menu-item px-5">
+                        <a href="{{ route('admin.profile') }}" class="menu-link px-5">{{ trans_choice('content.topbar.my_profile', 1) }}</a>
+                    </div>
                     <!--end::Menu item-->
                     <!--begin::Menu item-->
                     {{-- <div class="menu-item px-5">
@@ -90,13 +89,13 @@
                     <div class="separator my-2"></div>
                     <!--end::Menu separator-->
                     <!--begin::Menu item-->
-                   
+
                     <!--end::Menu item-->
                     <!--begin::Menu item-->
-                  
+
                     <!--end::Menu item-->
                     <!--begin::Menu item-->
-                    
+
                     <!--end::Menu item-->
                     <!--begin::Menu separator-->
                     <!--<div class="menu-item px-5 my-1">

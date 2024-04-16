@@ -12,7 +12,7 @@ class Globalsetting extends Model
 
     protected $table = 'globals';
     protected $primaryKey = 'global_id';
-    
+
     protected $fillable = [
         'application_name',
         'application_logo',
@@ -22,7 +22,9 @@ class Globalsetting extends Model
         'currency_symbol',
         'address',
         'email',
-        'phone'
+        'phone',
+        'razorpay_key',
+        'razorpay_secert'
     ];
 
 }

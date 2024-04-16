@@ -127,7 +127,7 @@ class ItemController extends Controller
 
         // $storediscountprice = $input['item_price'] * $input['dis_item_price'] / 100;
 
-        $mainprice = $input['item_price'] * $input['quantity']  ;
+        $mainprice = $input['item_price'];
 
         // $input['dis_item_price'] = $storediscountprice;
         $input['item_price'] = $mainprice;

@@ -99,7 +99,7 @@ class NotificationController extends Controller
         }
 
         return view('admin.notification.index');
-        
+
     }
 
     /**
@@ -129,6 +129,7 @@ class NotificationController extends Controller
         foreach ($data as $datas) {
             $input['user_id'] = $datas->id;
         }
+
         $battle = $this->intrestService->create($input, $screen);
         return redirect()->route($this->index_route_name)
             ->with('success', $this->mls->messageLanguage('created', 'notification', 1));

@@ -34,7 +34,6 @@
                             <th>Category</th>
                             <th>Item Image</th>
                             <th>Item Price</th>
-
                             <th>Item Quantity</th>
                             <th>Item Description</th>
                             <th>Item Publish</th>
@@ -118,6 +117,3 @@
 </script>
 
 </html>
-
-4.1681638841homebanner.png
-5.1681638877ac-installation.jpg

@@ -226,7 +226,7 @@ function total_driver()
 
 function total_order()
 {
-    $total_order = Order::count('order_id');
+    $total_order = Order::count('order_no');
     return $total_order;
 }
 

@@ -281,7 +281,7 @@
                     </div>
 
                     <!-- end Banner menu section --!>
-                    
+
                     <!-- start Notification menu section --!>
 
                     <div class="menu-item">
@@ -326,15 +326,15 @@
 
                     <!-- start Global menu section --!>
 
-                    <!--<div class="menu-item">-->
-                    <!--    <a class="menu-link {{ checkActiveSideBar(['global']) ? 'menu-item active' : '' }}"-->
-                    <!--        href="{{ url('/') }}/admin/globals/edit/1">-->
-                    <!--        <span class="menu-icon">-->
-                    <!--            <i class="fa fa-gear" style="color:cyanblue;font-size:15px;"></i>-->
-                    <!--        </span>-->
-                    <!--        <span class="menu-title">Global Setting</span>-->
-                    <!--    </a>-->
-                    <!--</div>-->
+                    <div class="menu-item">
+                        <a class="menu-link {{ checkActiveSideBar(['global']) ? 'menu-item active' : '' }}"
+                            href="{{ url('/') }}/admin/globals/edit/1">
+                            <span class="menu-icon">
+                                <i class="fa fa-gear" style="color:cyanblue;font-size:15px;"></i>
+                            </span>
+                            <span class="menu-title">Global Setting</span>
+                        </a>
+                    </div>
 
                     <!-- end Global menu section --!>
 
@@ -394,7 +394,7 @@
 
                 <!-- end Commission menu section --!>
 
-                    
+
                     <!-- start Commission menu section --!>
 
                         <!-- <div class="menu-item">
@@ -520,7 +520,7 @@
                         </div> -->
 
                 <!-- end Wallet Transaction menu section --!>
-                    
+
                     <!-- start Order Transaction menu section --!>
 
                         <!-- <div class="menu-item">

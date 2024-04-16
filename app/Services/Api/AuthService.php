@@ -452,6 +452,9 @@ class AuthService
                     $user = DB::table('users')
                         ->where('id', $user->id)->first();
 
+                    DB::table('users')->where('id', $user->id)->update(array('mob_verify' => 1));
+
+
                     if ($user->status == 0 || $user->mob_verify == 1) {
 
                         $data->delete();

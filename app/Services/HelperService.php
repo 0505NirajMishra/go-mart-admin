@@ -73,7 +73,7 @@ class HelperService
     public static function sendMessage($country_code,$number, $message, $otp = '')
     {
         if (!empty($otp)) {
-            $data = [  
+            $data = [
                 'email' => $number,
                 'otp' => $otp,
                 'role_id' => 2
@@ -97,7 +97,7 @@ $headers[] = 'Accept: application/json';
 $headers[] = 'Content-Type: application/x-www-form-urlencoded';
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
-$result = curl_exec($ch); 
+$result = curl_exec($ch);
 if (curl_errno($ch)) {
     echo 'Error:' . curl_error($ch);
 }
@@ -204,14 +204,13 @@ curl_close($ch);
         $headr[] = 'Authorization: key=' . $fcm_server_key;
 
         $user = UserService::getById($noti_data['id']);
-        
         $call=Notification::where('notification_id',$noti_data['notification_id'])->first();
-       
 
-        if($user->push_notification==0) 
-        {  
+        if($user->push_notification==0)
+        {
             return true;
         }
+
         $noti_data['notification']['sound']="default";
         $data_array =
             [
@@ -219,7 +218,7 @@ curl_close($ch);
                 "notification" => $noti_data['notification'],
                 "data"=>[
                     "click_action"=> "FLUTTER_NOTIFICATION_CLICK",
-                    "sound"=> "default", 
+                    "sound"=> "default",
                     "status"=> "done",
                     "screen"=> $screen==0 ? "Notifications" :"Call",
                     "newdata"=>[$call],
@@ -231,12 +230,10 @@ curl_close($ch);
                         ],
                     ],
                 ],
+        ];
 
-                
-            ];
-          
-           
         $data_json = json_encode($data_array, true);
+
         // dd($data_array, $data_json);
         try {
             $url = "https://fcm.googleapis.com/fcm/send";

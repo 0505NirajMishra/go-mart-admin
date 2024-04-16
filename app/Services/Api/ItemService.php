@@ -87,7 +87,6 @@ class ItemService
 
     public static function getProductByCatID(Request $request)
     {
-        // echo "sdvjdsbnvkjsdv";
 
         try {
 

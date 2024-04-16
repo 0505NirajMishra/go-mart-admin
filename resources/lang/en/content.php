@@ -223,7 +223,7 @@ return [
     'driver' => 'Drivers|Drivers',
     'store' => 'Stores|Stores',
     'payment' => 'Razorpay|Razorpay',
-    
+
     'user_id' => 'User Id',
     'customer_id' => 'Customer Id',
     'import' => 'Import',
@@ -244,7 +244,7 @@ return [
     'price_title'=>'Price',
     'amazon_title'=>'Amazon Link',
     'question_eng'=>'Question English',
-    'question_fren'=>'Question French',  
+    'question_fren'=>'Question French',
 
     //Dashboard
     'rating'=>'Rating',
@@ -255,7 +255,7 @@ return [
     'start_date' => 'Start Date',
     'end_date' => 'End Date',
     'consult_title' => 'Consultant',
-    
+
     'running_title' => 'Running',
     'is_active_title' => 'Is Active',
     'f_name'=>'Name',
@@ -269,7 +269,7 @@ return [
     'deactive_title' => 'Deactive',
     'verify_title' => 'Verify',
     'unverify_title' => 'Unverify',
-      
+
     'name_title' => 'Name',
     'icon_title' => 'Icon',
     'intrest_name' => 'Name',
@@ -282,7 +282,7 @@ return [
     'category_image' => 'Category Image',
     'description' => 'Description',
 
-    // item 
+    // item
     'item_name' => 'Item Name',
     'item_price' => 'Item Price',
     'item_discount' => 'Item Discount',
@@ -291,73 +291,78 @@ return [
     'quantity' => 'Quantity',
     'item_expiry_date' => 'Item Expiry Date',
 
-    // banner 
+    // banner
     'banner_title' => 'Banner Title',
     'set_order' => 'Banner Set Order',
 
-    // notification 
+    // notification
     'notification_subject' => 'Notification Subject',
-    'notification_send_to' => 'Send To', 
-    'notification_message' => 'Notification Message', 
+    'notification_send_to' => 'Send To',
+    'notification_message' => 'Notification Message',
 
-    // order 
+    // order
     'order_type' => 'Order Type',
-    'order_status' => 'Order Status', 
-    'order_amount' => 'Order Amount', 
+    'order_status' => 'Order Status',
+    'order_amount' => 'Order Amount',
     'order_date' => 'Order Date',
 
-    // rating 
-    'order_rating' => 'Order Rating', 
-    'order_review' => 'Order Review', 
+    // rating
+    'order_rating' => 'Order Rating',
+    'order_review' => 'Order Review',
 
-    // coupan setting 
+    // coupan setting
 
-    'coupan_title' => 'Coupon Title', 
-    'amount' => 'Amount', 
+    'coupan_title' => 'Coupon Title',
+    'amount' => 'Amount',
     'discount' => 'Discount',
     'expiry_date' => 'Expiry Date',
     'coupan_status' => 'Coupan Status',
     'coupon_desc' => 'Coupan Description',
-    
-    // global setting 
 
-    'application_name' => 'Application Name', 
-    'application_logo' => 'Application Logo', 
+    // global setting
+
+    'application_name' => 'Application Name',
+    'application_logo' => 'Application Logo',
     'application_color' => 'Application Color',
     'currency_symbol' => 'Currency Symbol',
     'currency_code' => 'Currency Code',
     'currency_name' => 'Currency Name',
+    'razorpay_key' => 'Razorpay key',
+    'razorpay_secert' => 'Razorpay secert',
+    'address' => 'Address',
+    'email' => 'Email',
+
 
     // Language
 
-    'language_name' => 'Language Name', 
-    'language_slug' => 'Language Slug', 
+    'language_name' => 'Language Name',
+    'language_slug' => 'Language Slug',
     'language_status' => 'Language Status',
 
-    // commission  
-    'commission_type' => 'Commission Type', 
+    // commission
+    'commission_type' => 'Commission Type',
     'admin_commision' => 'Admin Commission',
 
-    // commission  
-    'store_nearby' => 'Store nearby radius', 
+    // commission
+    'store_nearby' => 'Store nearby radius',
     'radius_nearby' => 'Driver nearby radius',
 
-    // vat  
-    'vat_lable' => 'Vat Lable', 
+    // vat
+    'vat_lable' => 'Vat Lable',
     'vat_tax' => 'Vat Tax',
     'vat_type' => 'Vat Type',
 
-    // delivery charge  
-    'delivery_charge_per_km' => 'Delivery charge per km', 
+    // delivery charge
+    'delivery_charge_per_km' => 'Delivery charge per km',
     'minimum_delivery_charge' => 'Minimum delivery charge',
     'minimum_delivery_charge_with_km' => 'Minimum delivery charge with km',
 
     // store payouts
 
-    'Amount' => 'Amount', 
+    'Amount' => 'Amount',
     'Note' => 'Note',
 
-    // Driver 
+    // Driver
 
     'driver_name' => 'Driver Name',
     'store_name' => 'Store Name',
@@ -367,7 +372,7 @@ return [
     'driver_longitude' => 'Driver Longitude',
     'driver_latitude' => 'Driver Latitude',
 
-    // store 
+    // store
 
     'store_name' => 'Store Name',
     'store_phone' => 'Store Phone',
@@ -381,7 +386,7 @@ return [
     'store_status' => 'Store Status',
     'store_active' => 'Store Active',
 
-    // customer 
+    // customer
 
     'car_name' => 'Car Name',
     'car_number' => 'Car Number',

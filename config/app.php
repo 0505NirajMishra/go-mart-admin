@@ -164,8 +164,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-
-        // Barryvdh\DomPDF\ServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 
          /*
          * Package Service Providers...
@@ -204,7 +203,7 @@ return [
         'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
         'HelperService' => App\Services\HelperService::class,
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
-        // 'PDF' => Barryvdh\DomPDF\Facades::class,
+        // 'PDF' => Barryvdh\DomPDF\Facade::class,
         // 'JWTAuth'=>Tymon\JWTAuth\Facades\JWTAuth::class,
         // 'JWTFactory'=>Tymon\JWTAuth\Facades\JWTFactory::class,
         // 'Excel' => Maatwebsite\Excel\Facades\Excel::class,

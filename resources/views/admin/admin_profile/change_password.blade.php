@@ -18,17 +18,6 @@
                 <!--begin::Body-->
                 <div class="card-body p-lg-17">
                     <!--begin::Hero-->
-                    {{-- <div class="position-relative mb-17">
-                        <!--begin::Overlay-->
-                        <div class="overlay overlay-show">
-                            <!--begin::Title-->
-                            <h3 class="fs-2qx fw-bolder mb-3 m">
-                                {{ trans_choice('content.change_password', 1) }}
-                            </h3>
-                            <!--end::Title-->
-                        </div>
-                        <!--end::Overlay-->
-                    </div> --}}
                     <!--end::-->
                     <!--begin::Layout-->
                     <div class="d-flex flex-column flex-lg-row mb-17">
@@ -54,8 +43,8 @@
                                     @endif
 
 
-                                   
-                                  
+
+
                                 </div>
                                 <!--end::Col-->
                             </div>

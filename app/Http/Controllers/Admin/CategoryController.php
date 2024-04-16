@@ -65,7 +65,7 @@ class CategoryController extends Controller
                 });
             }
 
-            return \DataTables::of($query)->addIndexColumn()
+            return DataTables::of($query)->addIndexColumn()
 
                 ->addColumn('action', function ($row) {
                     $btn1 = '<a href="categorys/' . $row->cat_id . '/edit" class="badge badge-success p-2"><i
@@ -165,7 +165,7 @@ class CategoryController extends Controller
 
     public function edit(Category $category)
     {
-        
+
         return view($this->edit_view, compact('category'));
     }
 

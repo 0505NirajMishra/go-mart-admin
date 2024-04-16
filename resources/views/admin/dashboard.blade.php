@@ -52,6 +52,7 @@
 
                                     <!--begin::Col-->
 
+                                    {{--
                                     <div class="col bg-light-primary px-6 py-8 rounded-2 me-7 mb-7 text-center">
                                         <i class="fa fa-bag-shopping" style="font-size:35px;color:#009EF7;"></i>
                                         <span class="svg-icon svg-icon-3x svg-icon-primary d-block my-2">
@@ -72,12 +73,37 @@
                                         </a>
 
                                     </div>
+                                    --}}
+
+                                    <div class="col bg-light-primary px-6 py-8 rounded-2 me-7 mb-7 text-center">
+                                        <i class="fa fa-cart-shopping" style="font-size:35px;color:#009EF7;"></i>
+                                        <span class="svg-icon svg-icon-3x svg-icon-primary d-block my-2">
+                                            <h5>{{ total_order() }}</h5>
+                                        </span>
+
+                                        <a class="text-primary fw-bold fs-6">
+                                            {{ trans_choice('content.dashboard_cards.total_orders', 1) }}
+                                        </a>
+
+                                        <a href="{{ route('admin.orders.index') }}">
+
+                                            <div class="mt-1">
+                                                <div class="fw-bold fs-6" style="margin-left:15px;">
+                                                    <label style="color:black;cursor: pointer;">More infos &nbsp;</label><i
+                                                        class="fa-solid fa-arrow-right p-1 fs-8"
+                                                        style="background-color: #009EF7;color:white;border-radius:12px;"></i>
+                                                </div>
+                                            </div>
+
+                                        </a>
+
+                                    </div>
 
                                     <!--end::Col-->
 
                                     <!--begin::Col-->
 
-                                    <div class="col bg-light-primary px-6 py-8 rounded-2 me-7 mb-7 text-center">
+                                    {{--  <div class="col bg-light-primary px-6 py-8 rounded-2 me-7 mb-7 text-center">
                                         <i class="fa fa-car" style="font-size:35px;color:#009EF7;"></i>
                                         <span class="svg-icon svg-icon-3x svg-icon-primary d-block my-2">
                                             <h5>{{ total_driver() }}</h5>
@@ -99,7 +125,7 @@
                                         </a>
 
 
-                                    </div>
+                                    </div>  --}}
 
                                     <!--end::Col-->
                                 </div>
@@ -114,7 +140,7 @@
                 <!--end::Body-->
             </div>
 
-            <div class="row gy-3 g-xl-8">
+            {{--  <div class="row gy-3 g-xl-8">
                 <!--begin::Col-->
                 <div class="col-12">
                     <!--begin::Mixed Widget 2-->
@@ -131,7 +157,7 @@
                                     <div class="col bg-light-primary px-6 py-8 rounded-2 me-7 mb-7 text-center">
                                         <i class="fa fa-cart-shopping" style="font-size:35px;color:#009EF7;"></i>
                                         <span class="svg-icon svg-icon-3x svg-icon-primary d-block my-2">
-                                            {{--  <h5>{{ total_order() }}</h5>  --}}
+                                            <h5>{{ total_order() }}</h5>
                                         </span>
 
                                         <a class="text-primary fw-bold fs-6">
@@ -158,7 +184,7 @@
                                     <div class="col bg-light-primary px-6 py-8 rounded-2 me-7 mb-7 text-center">
                                         <i class="fa fa-building-columns" style="font-size:35px;color:#009EF7;"></i>
                                         <span class="svg-icon svg-icon-3x svg-icon-primary d-block my-2">
-                                            {{--  <h5>{{ total_order() }}</h5>  --}}
+                                            <h5>{{ total_order() }}</h5>
                                         </span>
 
                                         <a class="text-primary fw-bold fs-6">
@@ -182,7 +208,7 @@
                                     <div class="col bg-light-primary px-6 py-8 rounded-2 me-7 mb-7 text-center">
                                         <i class="fa fa-wallet" style="font-size:35px;color:#009EF7;"></i>
                                         <span class="svg-icon svg-icon-3x svg-icon-primary d-block my-2">
-                                            {{--  <h5>{{ total_order() }}</h5>  --}}
+
                                         </span>
 
                                         <a class="text-primary fw-bold fs-6">
@@ -212,10 +238,10 @@
                     <!--end::Stats-->
                 </div>
                 <!--end::Body-->
-            </div>
+            </div>  --}}
 
             <!-- start earning and top stores -->
-            <div class="row gy-5 g-xl-8 mt-5 mb-5 d-flex">
+            {{--  <div class="row gy-5 g-xl-8 mt-5 mb-5 d-flex">
                 <div class="col-lg-6 grid-margin stretch-card">
                     <div class="card h-100">
                         <div class="card-header">
@@ -283,18 +309,18 @@
                                         @endforeach  --}}
 
 
-                                    </tbody>
+                                    {{--  </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div>  --}}
+            {{--  </div>  --}}
             <!-- end earning and top stores -->
 
             <!-- start recent order and top driver list -->
 
-            <div class="row gy-5 g-xl-8 mt-5 mb-5 d-flex">
+            {{--  <div class="row gy-5 g-xl-8 mt-5 mb-5 d-flex">
                 <div class="col-lg-6 grid-margin stretch-card">
                     <div class="card h-100">
                         <div class="card-header">
@@ -328,13 +354,13 @@
                                                     &nbsp;{{ itemCount($order->order_id) }}</td>
                                             </tr>
                                         @endforeach  --}}
-                                    </tbody>
+                                    {{--  </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 grid-margin stretch-card">
+                </div>  --}}
+                {{--  <div class="col-lg-6 grid-margin stretch-card">
                     <div class="card h-100">
                         <div class="card-header">
                             <h4 class="card-title">Top Drivers</h4>
@@ -354,7 +380,7 @@
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody>  --}}
                                         {{--  @foreach ($driver_list as $driver)
                                             <tr>
                                                 <td> <img src={{ env('IMAGE_URL') }}/uploads/{{ $driver->driver_image }}
@@ -371,13 +397,13 @@
                                                 </td>
                                             </tr>
                                         @endforeach  --}}
-                                    </tbody>
+                                    {{--  </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div>  --}}
+            {{--  </div>  --}}
 
             <!-- end recent order and top driver list -->
 

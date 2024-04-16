@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Notification;
+use Illuminate\Support\Facades\Log;
 
 class NotificationService
 {
@@ -22,8 +23,8 @@ class NotificationService
                 "notification_subject" => $data->notification_subject,
                 "notification_message" => $data->notification_message],
         ];
-        
-        $notification = HelperService::sendNotification($notification);
+
+        $notification1 = HelperService::sendNotification($notification);
         return $data;
     }
 

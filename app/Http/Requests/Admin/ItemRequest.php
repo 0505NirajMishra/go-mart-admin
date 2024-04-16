@@ -13,7 +13,7 @@ class ItemRequest extends FormRequest
         if (!request()->is('admin/item/create')) {
             return [
                 'item_name' => 'required|regex:/(^[A-Za-z ]+$)+/',
-                'item_price' => 'required',
+                'item_price' => 'required|regex:/^[0-9]+$/',
                 'category_name' => 'required',
                 'item_publish' => 'required',
                 'item_image' => 'required',
@@ -28,7 +28,7 @@ class ItemRequest extends FormRequest
         } else {
             return [
                 'item_name' => 'required|regex:/(^[A-Za-z ]+$)+/',
-                'item_price' => 'required',
+                'item_price' => 'required|regex:/^[0-9]+$/',
                 'category_name' => 'required',
                 'item_publish' => 'required',
                 'item_image' => 'required',
