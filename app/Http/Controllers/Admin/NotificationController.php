@@ -66,7 +66,7 @@ class NotificationController extends Controller
 
         if ($request->ajax()) {
             $data = DB::table('notifications')->get();
-            return \DataTables::of($data)->addIndexColumn()
+            return DataTables::of($data)->addIndexColumn()
                 ->filter(function ($instance) use ($request) {
                     if (!empty($request->get('notification_subject'))) {
                         $instance->collection = $instance->collection->filter(function ($row) use ($request) {
@@ -126,11 +126,14 @@ class NotificationController extends Controller
         $screen = 0;
         $data = User::where('login_type', $input['notification_send_to'])->get();
 
+                // $data = User::get();
+
         foreach ($data as $datas) {
             $input['user_id'] = $datas->id;
+             $battle = $this->intrestService->create($input, $screen);
         }
 
-        $battle = $this->intrestService->create($input, $screen);
+
         return redirect()->route($this->index_route_name)
             ->with('success', $this->mls->messageLanguage('created', 'notification', 1));
     }

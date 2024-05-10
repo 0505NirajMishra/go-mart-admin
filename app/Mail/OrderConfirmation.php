@@ -2,10 +2,15 @@
 
 namespace App\Mail;
 
+use App\Models\OrderItem;
+use App\Models\User;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Carbon\Carbon;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class OrderConfirmation extends Mailable
 {
@@ -29,6 +34,9 @@ class OrderConfirmation extends Mailable
 
         $ldate = date('YmdHis');
 
+        $currentdatetime = Carbon::today()->format('Y-m-d');
+        $newdateformat = Carbon::createFromFormat('Y-m-d',$currentdatetime)->format('M d Y');
+
         $changedata = json_decode($addOrder);
 
         set_time_limit(2500);
@@ -38,21 +46,23 @@ class OrderConfirmation extends Mailable
         . mt_rand(1000000, 9999999) . $characters[rand(0, strlen($characters) - 1)];
         $string = str_shuffle($pin);
 
-        $pdf = Pdf::loadView('invoice', ['addOrder' => $addOrder]);
+        $userData = User::find($addOrder->user_id);
+        $orderDetails = DB::table('order_items')->where('order_no',$addOrder->order_no)->get();
+
+        $pdf = Pdf::loadView('invoice', ['addOrder' => $addOrder,'string' => $string,'newdateformat'=>$newdateformat,'userData' => $userData,'orderDetails' => $orderDetails]);
 
         $fileName = 'invoice' . '_' . $ldate . '.pdf';
-        $path = public_path('uploads/pdf/'); // Use public_path() to get the public directory path
+        $path = public_path('uploads/pdf/');
 
-        // Create the directory if it doesn't exist
         if (!file_exists($path)) {
-            mkdir($path, 0777, true); // Create directory with full permissions
+            mkdir($path, 0777, true);
         }
 
         $pdf->save($path . $fileName);
 
         return $this->view('order')
             ->subject("Go mart")
-            ->with(['addOrder' => $changedata, 'fileName' => $fileName])
+            ->with(['addOrder' => $changedata, 'fileName' => $fileName ])
             ->attachData($pdf->output(), 'invoice.pdf');
     }
 

@@ -3,7 +3,6 @@
 namespace App\Services;
 
 use App\Models\Notification;
-use Illuminate\Support\Facades\Log;
 
 class NotificationService
 {
@@ -17,11 +16,11 @@ class NotificationService
     {
         $data = Notification::create($data);
         $notification = [
-            "notification_id" => $data->notification_id,
+            "noti_id" => $data->notification_id,
             "id" => $data->user_id,
             "notification" => [
-                "notification_subject" => $data->notification_subject,
-                "notification_message" => $data->notification_message],
+                "title" => $data->notification_subject,
+                "body" => $data->notification_message],
         ];
 
         $notification1 = HelperService::sendNotification($notification);
@@ -97,9 +96,7 @@ class NotificationService
      */
     public static function datatable()
     {
-
         $data = Notification::orderBy('created_at', 'desc')->paginate(10);
-
         return $data;
     }
 }

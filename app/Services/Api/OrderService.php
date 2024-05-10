@@ -6,6 +6,7 @@ use App\Mail\OrderConfirmation;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\OrderItem;
+use App\Services\NotificationService;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
@@ -77,20 +78,15 @@ class OrderService
             }
 
             OrderService::Ordermail($addOrder);
-
-            // $data = [
-            //     'order_id' => $addOrder->order_id,
-            //     'item_id' => $OrderInput['items']['item_id'],
-            // ];
-
-            // $screen = 0;
-            // $input = [
-            //     'notification' => 'Order Purchase',
-            //     'message' => 'You Order Purchase',
-            //     'user_id' => auth()->user()->id,
-            //     'order_id' => $addOrder->order_no,
-            // ];
-            // NotificationService::create($input, $screen);
+            
+            $screen = 0;
+            $input = [
+                'notification_subject' => 'Order Purchase',
+                'notification_message' => 'You Order Purchase ',
+                'user_id' => Auth::user()->id,
+                // 'order_id' => $addOrder->order_no,
+            ];
+            NotificationService::create($input,$screen);
 
             if ($addOrder) {
                 return response()->json(
@@ -124,21 +120,21 @@ class OrderService
     public static function Ordermail($addOrder)
     {
         $userdata = User::find($addOrder->user_id);
-        $data = Mail::to($userdata->email)->send(new OrderConfirmation($addOrder));
+        Mail::to($userdata->email)->send(new OrderConfirmation($addOrder));
 
-        if ($data) {
+        // if ($data) {
 
-            return response()->json([
-                'status' => true,
-                'message' => 'Order confirmation email sent successfully',
-                'OrderData' => $addOrder,
-            ], 200);
-        } else {
-            return response()->json([
-                'status' => false,
-                'message' => 'failed',
-            ], 404);
-        }
+        //     return response()->json([
+        //         'status' => true,
+        //         'message' => 'Order confirmation email sent successfully',
+        //         'OrderData' => $addOrder,
+        //     ], 200);
+        // } else {
+        //     return response()->json([
+        //         'status' => false,
+        //         'message' => 'failed',
+        //     ], 404);
+        // }
 
     }
 

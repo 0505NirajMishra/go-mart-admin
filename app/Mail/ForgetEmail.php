@@ -16,7 +16,7 @@ class ForgetEmail extends Mailable
     {
         $this->details = $details;
     }
-   
+
 
     public function build()
     {

@@ -164,7 +164,6 @@ class ItemController extends Controller
      */
     public function edit(Item $item)
     {
-
         $data['categories'] = Category::get(["category_name", "cat_id"]);
         $data['stores'] = Stores::get(["store_name", "store_id"]);
         return view($this->edit_view, $data, compact('item'));
@@ -182,7 +181,6 @@ class ItemController extends Controller
         $input = $request->except(['_method', '_token', 'proengsoft_jsvalidation']);
 
         // $storediscountprice = $input['item_price'] * $input['dis_item_price'] / 100;
-
         // $input['dis_item_price'] = $storediscountprice;
 
         if (!empty($input['item_image'])) {

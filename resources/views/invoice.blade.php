@@ -8,7 +8,7 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 
 <head>
 
-	<title>Gomart Order Reciept</title>
+	<title>Go-mart Order Reciept</title>
 
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -144,7 +144,116 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 							</tr>
 						</tbody>
 					</table>
+					<table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-2"
+						role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+						<tbody>
+							<tr>
+								<td>
+									<table align="center" border="0" cellpadding="0" cellspacing="0"
+										class="row-content stack" role="presentation"
+										style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; color: #000000; width: 640px;"
+										width="640">
+										<tbody>
+											<tr>
+												<td class="column column-1"
+													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 20px; padding-top: 20px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
+													width="58.333333333333336%">
+													<table border="0" cellpadding="0" cellspacing="0"
+														class="image_block block-1" role="presentation"
+														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;"
+														width="100%">
+														<tr>
+															<td class="pad"
+																style="padding-left:10px;width:100%;padding-right:0px;">
+																<div align="left" class="alignment" style="line-height:10px">
+																		{{--  <img
+																			alt="Logo"
+																			src=""
+																			style="display: block; height: auto; border: 0; width: NaNpx; max-width: 100%;"
+																			title="Logo" width="NaN"
+																		/>  --}}
+																</div>
+															</td>
+														</tr>
+													</table>
+													<table border="0" cellpadding="0" cellspacing="0"
+														class="text_block block-2" role="presentation"
+														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
+														width="100%">
+														<tr>
+															<td class="pad"
+																style="padding-left:10px;padding-right:10px;padding-top:10px;">
+																<div style="font-family: sans-serif">
+																	<div class=""
+																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #000; line-height: 1.2;">
+																		<p
+																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
+																			<span style="font-size:20px;"><strong>Go Mart<br /></strong></span></p>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+													<table border="0" cellpadding="0" cellspacing="0"
+														class="text_block block-3" role="presentation"
+														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
+														width="100%">
+														<tr>
+															<td class="pad"
+																style="padding-bottom:10px;padding-left:10px;padding-right:10px;">
+																<div style="font-family: sans-serif">
+																	<div class=""
+																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 21px; color: #000000; line-height: 1.5;">
+																		<p
+																			style="margin: 0; mso-line-height-alt: 21px;">
+																			353,massimo shopping mall</p>
+																		<p
+																			style="margin: 0; mso-line-height-alt: 21px;">
+																			Bhirad,</p>
+																		<p
+																			style="margin: 0; mso-line-height-alt: 21px;">
+																			Althan Road Surat</p>
+																		<p
+																			style="margin: 0; mso-line-height-alt: 21px;">
+																			India</p>
 
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="column column-2"
+													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 35px; padding-top: 40px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
+													width="41.666666666666664%">
+													<table border="0" cellpadding="10" cellspacing="0"
+														class="text_block block-1" role="presentation"
+														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
+														width="100%">
+														<tr>
+															<td class="pad" style="padding-top:60px;">
+																<div style="font-family: sans-serif">
+																	<div class=""
+																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; text-align: right; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
+																		{{--  <p
+																			style="margin: 0; mso-line-height-alt: 16.8px;">
+																			<span style="font-size:22px;"><strong>Order
+																					RECEIPT<br /><span
+																						style="font-size:14px;">{{ $string }}</span><br /></strong></span>
+																		</p>  --}}
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 					<table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-3"
 						role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 						<tbody>
@@ -186,16 +295,16 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
 														width="100%">
 														<tr>
-															<!-- <td class="pad" style="padding-left:10px;padding-top:10px;">
+															<td class="pad" style="padding-left:10px;padding-top:10px;">
 																<div style="font-family: sans-serif">
 																	<div class=""
 																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #9a9a9a; line-height: 1.2;">
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: right; mso-line-height-alt: 16.8px;">
-																			<strong>Receipt No :<br /></strong></p>
+																			<strong>Order No :<br /></strong></p>
 																	</div>
 																</div>
-															</td> -->
+															</td>
 														</tr>
 													</table>
 												</td>
@@ -214,7 +323,7 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: right; mso-line-height-alt: 16.8px;">
-																			</p>
+																			{{ $addOrder->order_no }}</p>
 																	</div>
 																</div>
 															</td>
@@ -254,7 +363,7 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
-																			<span style="font-size:20px;"><strong>  <br /></strong></span></p>
+																			<span style="font-size:20px;"><strong> {{$userData->name}} <br /></strong></span></p>
 																	</div>
 																</div>
 															</td>
@@ -297,7 +406,7 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: right; mso-line-height-alt: 16.8px;">
-
+																		{{$newdateformat}}
 																		</p>
 																	</div>
 																</div>
@@ -338,7 +447,7 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 																		style="font-size: 14px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
-																			<span style="font-size:14px;">
+																			<span style="font-size:14px;">{{ $addOrder->address}}
 																			<br /></span></p>
 																	</div>
 																</div>
@@ -346,7 +455,50 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 														</tr>
 													</table>
 												</td>
-
+												<td class="column column-2"
+													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
+													width="25%">
+													<table border="0" cellpadding="0" cellspacing="0"
+														class="text_block block-1" role="presentation"
+														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
+														width="100%">
+														<tr>
+															<td class="pad" style="padding-left:10px;">
+																<div style="font-family: sans-serif">
+																	<div class=""
+																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #9a9a9a; line-height: 1.2;">
+                                                                        <p
+																			style="margin: 0; font-size: 14px; text-align: right; mso-line-height-alt: 16.8px;">
+																			<strong>Payment Method :<br /></strong></p>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="column column-3"
+													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
+													width="33.333333333333336%">
+													<table border="0" cellpadding="0" cellspacing="0"
+														class="text_block block-1" role="presentation"
+														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
+														width="100%">
+														<tr>
+															<td class="pad"
+																style="padding-left:5px;padding-right:10px;">
+																<div style="font-family: sans-serif">
+																	<div class=""
+																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
+                                                                        <p
+																			style="margin: 0; font-size: 14px; text-align: right; mso-line-height-alt: 16.8px;">
+                                                                            {{ $addOrder->payment_method}}
+                                                                        </p>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
 											</tr>
 										</tbody>
 									</table>
@@ -376,14 +528,14 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 															<td class="pad"
 																style="padding-left:10px;padding-right:10px;">
 																<div style="font-family: Arial, sans-serif">
-																	<div class=""
+																	{{--  <div class=""
 																		style="font-size: 14px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
 																			<span
-																				style="font-size:14px;"></span>
+																				style="font-size:14px;">{{ $storeaddress->city}}</span>
 																		</p>
-																	</div>
+																	</div>  --}}
 																</div>
 															</td>
 														</tr>
@@ -425,7 +577,7 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: right; mso-line-height-alt: 16.8px;">
-
+																			{{$userData->email}}
 																		</p>
 																	</div>
 																</div>
@@ -464,10 +616,10 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 																<div style="font-family: Arial, sans-serif">
 																	<div class=""
 																		style="font-size: 14px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
-																		<p
+																		{{--  <p
 																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
-																			<span style="font-size:14px;">
-																			 <br /></span></p>
+																			<span style="font-size:14px;">{{ $storeaddress->state}}
+																			 {{ $storeaddress->zipcode}}<br /></span></p>  --}}
 																	</div>
 																</div>
 															</td>
@@ -482,17 +634,17 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
 														width="100%">
 														<tr>
-															<!-- <td class="pad" style="padding-left:10px;">
+															<td class="pad" style="padding-left:10px;">
 																<div style="font-family: sans-serif">
 																	<div class=""
 																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #9a9a9a; line-height: 1.2;">
-																		<p
+																		{{--  <p
 																			style="margin: 0; font-size: 14px; text-align: right; mso-line-height-alt: 16.8px;">
 																			<strong>Donation Interval :<br /></strong>
-																		</p>
+																		</p>  --}}
 																	</div>
 																</div>
-															</td> -->
+															</td>
 														</tr>
 													</table>
 												</td>
@@ -509,10 +661,10 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 																<div style="font-family: sans-serif">
 																	<div class=""
 																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
-																		<p
+																		{{--  <p
 																			style="margin: 0; font-size: 14px; text-align: right; mso-line-height-alt: 16.8px;">
-
-																		</p>
+																			{{ $donationarray->donation_type}}
+																		</p>  --}}
 																	</div>
 																</div>
 															</td>
@@ -563,7 +715,7 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 											<tr>
 												<td class="column column-1"
 													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
-													width="16.666666666666668%">
+													width="15%">
 													<table border="0" cellpadding="0" cellspacing="0"
 														class="text_block block-1" role="presentation"
 														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
@@ -576,7 +728,7 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 																		style="font-size: 14px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; mso-line-height-alt: 16.8px; color: #ffffff; line-height: 1.2;">
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
-																			<span style="font-size:14px;">#</span></p>
+																			<span style="font-size:14px;">Id</span></p>
 																	</div>
 																</div>
 															</td>
@@ -585,7 +737,7 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 												</td>
 												<td class="column column-2"
 													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
-													width="50%">
+													width="15%">
 													<table border="0" cellpadding="0" cellspacing="0"
 														class="text_block block-1" role="presentation"
 														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
@@ -597,16 +749,16 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #ffffff; line-height: 1.2;">
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
-																			product name</p>
+																			Product</p>
 																	</div>
 																</div>
 															</td>
 														</tr>
 													</table>
 												</td>
-												<td class="column column-3"
+                                                <td class="column column-3"
 													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
-													width="33.333333333333336%">
+													width="15%">
 													<table border="0" cellpadding="0" cellspacing="0"
 														class="text_block block-1" role="presentation"
 														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
@@ -619,7 +771,51 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #ffffff; line-height: 1.2;">
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: right; mso-line-height-alt: 16.8px;">
-																			Amount</p>
+																			Quantity</p>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="column column-3"
+													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
+													width="15%">
+													<table border="0" cellpadding="0" cellspacing="0"
+														class="text_block block-1" role="presentation"
+														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
+														width="100%">
+														<tr>
+															<td class="pad"
+																style="padding-left:5px;padding-right:10px;padding-top:5px;">
+																<div style="font-family: sans-serif">
+																	<div class=""
+																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #ffffff; line-height: 1.2;">
+																		<p
+																			style="margin: 0; font-size: 14px; text-align: right; mso-line-height-alt: 16.8px;">
+																			Price</p>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+                                                <td class="column column-3"
+													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
+													width="15%">
+													<table border="0" cellpadding="0" cellspacing="0"
+														class="text_block block-1" role="presentation"
+														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
+														width="100%">
+														<tr>
+															<td class="pad"
+																style="padding-left:5px;padding-right:10px;padding-top:5px;">
+																<div style="font-family: sans-serif">
+																	<div class=""
+																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #ffffff; line-height: 1.2;">
+																		<p
+																			style="margin: 0; font-size: 14px; text-align: right; mso-line-height-alt: 16.8px;">
+																			Total Price</p>
 																	</div>
 																</div>
 															</td>
@@ -643,10 +839,11 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 										style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff; color: #000000; width: 640px;"
 										width="640">
 										<tbody>
+                                            @foreach($orderDetails as $order)
 											<tr>
 												<td class="column column-1"
 													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
-													width="16.666666666666668%">
+													width="15%">
 													<table border="0" cellpadding="5" cellspacing="0"
 														class="text_block block-1" role="presentation"
 														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
@@ -660,7 +857,7 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
 																			<strong><span
 																					style="font-size:14px;">
-
+																					{{ $order->id }}
 																				</span></strong>
 																		</p>
 																	</div>
@@ -669,43 +866,99 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 														</tr>
 													</table>
 												</td>
-												<td class="column column-2"
-													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
-													width="50%">
+                                                <td class="column column-1"
+													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
+													width="30%">
 													<table border="0" cellpadding="5" cellspacing="0"
 														class="text_block block-1" role="presentation"
 														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
 														width="100%">
 														<tr>
 															<td class="pad">
-																<div style="font-family: sans-serif">
+																<div style="font-family: Arial, sans-serif">
 																	<div class=""
-																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
+																		style="font-size: 14px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
-																			<strong></strong></p>
+																			<strong><span
+																					style="font-size:14px;">
+																					{{ $order->item_name }}
+																				</span></strong>
+																		</p>
 																	</div>
 																</div>
 															</td>
 														</tr>
 													</table>
 												</td>
-												<td class="column column-3"
-													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
-													width="33.333333333333336%">
-													<table border="0" cellpadding="0" cellspacing="0"
+                                                <td class="column column-1"
+													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
+													width="15%">
+													<table border="0" cellpadding="5" cellspacing="0"
 														class="text_block block-1" role="presentation"
 														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
 														width="100%">
 														<tr>
-															<td class="pad"
-																style="padding-bottom:5px;padding-left:5px;padding-right:10px;padding-top:5px;">
-																<div style="font-family: sans-serif">
+															<td class="pad">
+																<div style="font-family: Arial, sans-serif">
 																	<div class=""
-																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
+																		style="font-size: 14px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
 																		<p
-																			style="margin: 0; font-size: 14px; text-align: right; mso-line-height-alt: 16.8px;">
-
+																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
+																			<strong><span
+																					style="font-size:14px;">
+																					{{ $order->quantity }}
+																				</span></strong>
+																		</p>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+                                                <td class="column column-1"
+													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
+													width="15%">
+													<table border="0" cellpadding="5" cellspacing="0"
+														class="text_block block-1" role="presentation"
+														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
+														width="100%">
+														<tr>
+															<td class="pad">
+																<div style="font-family: Arial, sans-serif">
+																	<div class=""
+																		style="font-size: 14px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
+																		<p
+																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
+																			<strong><span
+																					style="font-size:14px;">
+																					{{ $order->item_price  }}
+																				</span></strong>
+																		</p>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+                                                <td class="column column-1"
+													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
+													width="15%">
+													<table border="0" cellpadding="5" cellspacing="0"
+														class="text_block block-1" role="presentation"
+														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
+														width="100%">
+														<tr>
+															<td class="pad">
+																<div style="font-family: Arial, sans-serif">
+																	<div class=""
+																		style="font-size: 14px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; mso-line-height-alt: 16.8px; color: #000000; line-height: 1.2;">
+																		<p
+																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
+																			<strong><span
+																					style="font-size:14px;">
+																					{{ $order->quantity * $order->item_price  }}
+																				</span></strong>
 																		</p>
 																	</div>
 																</div>
@@ -714,6 +967,7 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 													</table>
 												</td>
 											</tr>
+                                            @endforeach
 										</tbody>
 									</table>
 								</td>
@@ -808,14 +1062,23 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 															<td class="pad">
 																<div align="right" class="alignment">
 																	<!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" style="height:34px;width:99px;v-text-anchor:middle;" arcsize="0%" stroke="false" fillcolor="#4676af"><w:anchorlock/><v:textbox inset="0px,0px,0px,0px"><center style="color:#000000; font-family:Tahoma, Verdana, sans-serif; font-size:16px"><![endif]-->
+
+                                                                    @php
+                                                                        $itemPrice = collect($orderDetails)->map(function ($checkitem) {
+                                                                               return $checkitem->item_price * $checkitem->quantity;
+                                                                       })->sum();
+                                                                       $subTotal = $itemPrice;
+
+                                                                   @endphp
+
 																	<div
 																		style="text-decoration:none;display:inline-block;color:#000000;background-color:#4676af;border-radius:0px;width:auto;border-top:0px solid transparent;font-weight:400;border-right:0px solid transparent;border-bottom:0px solid transparent;border-left:0px solid transparent;padding-top:5px;padding-bottom:5px;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;font-size:16px;text-align:center;mso-border-alt:none;word-break:keep-all;">
 																		<span
 																			style="padding-left:10px;padding-right:10px;font-size:16px;display:inline-block;letter-spacing:normal;"><span
 																				dir="ltr"
-																				style="word-break: break-word; line-height: 24px;">Total:
+																				style="word-break: break-word; line-height: 24px;">Sub Total:
 																				<strong>
-
+																					{{$subTotal}}
 																				</strong></span></span>
 																	</div>
 																	<!--[if mso]></center></v:textbox></v:roundrect><![endif]-->
@@ -856,7 +1119,10 @@ xmlns:v="urn:schemas-microsoft-com:vml"
 																		style="font-size: 14px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; text-align: center; mso-line-height-alt: 21px; color: #000000; line-height: 1.5;">
 																		<p
 																			style="margin: 0; mso-line-height-alt: 18px;">
-																			<span style="font-size:12px;"> @ copyright 2024 The Comnplete Softech</span></p>
+																			<span style="font-size:12px;"><span
+																					style="font-size:13px;"><strong>
+                                                                                    Go mart @ CopyRight 2024
+																			</span></p>
 																	</div>
 																</div>
 															</td>
